@@ -71,7 +71,10 @@ function youpress_settings_page()
 	<div class="wrap">
 		<h2>YoPress Settings</h2>
 		<p>
-			Some details here about how to use this plugin. 
+			Signup for an API key here: <a href="http://yoapi.justyo.co">yoapi.justyo.co</a><br>
+			Put your API key below and hit save changes. <br>
+			Then tell your visitors to Yo your website's username, or use <a href="http://button.justyo.co/">button.justyo.co</a> to generate a button. <br>
+			Now when you publish a new post your visitors will get Yo'd!<br>
 		</p>
 
 		<form method="post" action="options.php">
