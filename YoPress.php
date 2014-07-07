@@ -11,6 +11,21 @@
 
 add_action('admin_menu', 'yopress_create_menu');
 add_action( 'draft_to_publish', 'yopress_do_once_on_publish' );
+add_action( 'init', 'yopress_create_subscribers_list' );
+add_action('plugins_loaded', 'yopress_pageload' );
+
+function yopress_create_subscribers_list() {
+	register_post_type( 'yopress_subscribers',
+		array(
+			'labels' => array(
+				'name' => __( 'Subscribers' ),
+				'singular_name' => __( 'Subscriber' )
+			),
+		'public' => false,
+		'has_archive' => false,
+		)
+	);
+}
 
 
 function yopress_do_once_on_publish( $post ) 
@@ -44,6 +59,28 @@ function yopress_do_once_on_publish( $post )
 		curl_close($ch);
 	  
     }
+}
+
+function yopress_pageload() 
+{
+   	$username = $_GET['username'];
+
+    	if (isset($_GET['username'])) 
+	{
+		$exists=get_page_by_title( $username, NULL, "yopress_subscribers" );
+		
+		if (!$exists)
+		{
+		 	$youser = array(
+		 	 'post_title'    => $username,
+ 			 'post_content'  => $username,
+ 			 'post_status'   => 'publish',
+ 		 	 'post_author'   => 1, 
+		 	 'post_type'	=> 'yopress_subscribers'
+			);
+			wp_insert_post( $youser );
+		}
+	}
 }
 
 function yopress_create_menu() 
@@ -89,7 +126,26 @@ function youpress_settings_page()
     
    		<?php submit_button(); ?>
 
+
+
 		</form>
+		<h2>Subscribers</h2>
+		<ul>
+			<?php
+			$args = array( 'posts_per_page' => 5, 'post_type' => 'yopress_subscribers');
+
+			$subscribers = get_posts( $args );
+
+			foreach ( $subscribers as $subscriber )
+			{ ?>
+				<li>
+					<?php echo $subscriber->post_title; ?>
+				</li>
+			<?php 
+			} 
+			?>
+
+		</ul>
 	</div>
 <?php 
 }
