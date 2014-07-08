@@ -14,7 +14,7 @@ Yo your subscribers when you publish a new post!
 
 Instructions:
 
-Signup for an API key here: yoapi.justyo.co
+Signup for an API key at [yoapi.justyo.co](http://yoapi.justyo.co), for "Callback URL" put in your homepage with a trailing slash.
 
 Put your API key in the YoPress settings and hit save changes.
 
@@ -23,5 +23,9 @@ Then tell your visitors to Yo your website's username, or use button.justyo.co t
 Now when you publish a new post your visitors will get Yo'd!
 
 == Changelog ==
+= 0.2.1 =
+* Updated instructions. 
+= 0.2.0 =
+* Added a list of your subscribers! 
 = 0.1.0 =
 * First Version. Stable so far!
