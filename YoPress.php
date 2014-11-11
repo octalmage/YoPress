@@ -41,8 +41,10 @@ function yopress_do_once_on_publish( $post )
         update_post_meta( $post_id, 'yosent', true );
 	  
 		$url = 'http://api.justyo.co/yoall/';
+
+		$permalink = get_permalink($post_id);
 	  
-		$fields_string="api_token=" . get_option('yopress_apikey') . "&";
+		$fields_string="api_token=" . get_option('yopress_apikey') . "&" . "link=" . $permalink;
 
 		//open connection
 		$ch = curl_init();
