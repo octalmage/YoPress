@@ -113,7 +113,7 @@ function youpress_settings_page()
 			Signup for an API key at <a href="http://yoapi.justyo.co">yoapi.justyo.co</a>, for "Callback URL" put in your homepage with a trailing slash.<br>
 			Put your API key below and hit save changes. <br>
 			Then tell your visitors to Yo your website's username, or use <a href="http://button.justyo.co/">button.justyo.co</a> to generate a button. <br>
-			Now when you publish a new post your visitors will get Yo'd!<br>
+			Now when you publish a new post your visitors will get a Yo with the link!<br>
 		</p>
 
 		<form method="post" action="options.php">
