@@ -4,7 +4,7 @@
 	Plugin URI: http://jason.stallin.gs/yopress
 	Description: Yo your subscribers when you publish a new post. 
 	Author: Jason Stallings
-	Version: 0.2.1
+	Version: 0.2.2
 	Author URI: http://jason.stallin.gs
  */
 
