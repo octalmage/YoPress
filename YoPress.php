@@ -134,7 +134,7 @@ function youpress_settings_page()
 		<h2>Subscribers</h2>
 		<ul>
 			<?php
-			$args = array( 'posts_per_page' => 5, 'post_type' => 'yopress_subscribers');
+			$args = array( 'posts_per_page' => -1, 'post_type' => 'yopress_subscribers');
 
 			$subscribers = get_posts( $args );
 
