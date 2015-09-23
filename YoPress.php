@@ -6,6 +6,7 @@
 	Author: Jason Stallings
 	Version: 0.2.2
 	Author URI: http://jason.stallin.gs
+	Text Domain: yopress
  */
 
 
