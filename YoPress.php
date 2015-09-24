@@ -19,8 +19,8 @@ function yopress_create_subscribers_list() {
 	register_post_type( 'yopress_subscribers',
 		array(
 			'labels' => array(
-				'name' => __( 'Subscribers' ),
-				'singular_name' => __( 'Subscriber' )
+				'name' => __( 'Subscribers', 'yopress' ),
+				'singular_name' => __( 'Subscriber', 'yopress' )
 			),
 		'public' => false,
 		'has_archive' => false,
