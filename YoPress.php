@@ -13,7 +13,7 @@
 add_action( 'admin_menu', 'yopress_create_menu' );
 add_action( 'draft_to_publish', 'yopress_do_once_on_publish' );
 add_action( 'init', 'yopress_create_subscribers_list' );
-add_action('plugins_loaded', 'yopress_pageload' );
+add_action( 'plugins_loaded', 'yopress_pageload' );
 
 function yopress_create_subscribers_list() {
 	register_post_type( 'yopress_subscribers',
