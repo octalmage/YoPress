@@ -70,7 +70,7 @@ function yopress_pageload()
 
 	if (isset($_GET['username'])) 
 	{
-		$exists=get_page_by_title( $username, NULL, "yopress_subscribers" );
+		$exists = get_page_by_title( $username, NULL, "yopress_subscribers" );
 		
 		if (!$exists)
 		{
