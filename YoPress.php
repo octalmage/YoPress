@@ -68,7 +68,7 @@ function yopress_pageload()
 {
    	$username = $_GET['username'];
 
-    	if (isset($_GET['username'])) 
+	if (isset($_GET['username'])) 
 	{
 		$exists=get_page_by_title( $username, NULL, "yopress_subscribers" );
 		
